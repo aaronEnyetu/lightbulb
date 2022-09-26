@@ -1,35 +1,107 @@
-:root {
-    --background: rgb(224, 234, 247);
-    --header-background: rgb(254, 251, 245);
-    --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
-        'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
 }
-
-body {
-    font-family: var(--primary-font);
-    background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    padding: 15px;
-    height: 80px;
-
+body{
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center; 
+    background: #0a0b0c;
+}
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+/* .bulb::before{
+    content: '';
+    position: absolute;
+    top: -80;
+    left: 22.5px;
+    width: 35px;
+    height: 80px;
+    background: #444;
+    border-top: 30px solid #000;
+    border-radius: 10px;
 
-    background-color: var(--header-background);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+} */
+.bulb .wire{
+    width: 5px;
+    height: 20vh;
+    background: rgba(255, 255, 255, 0.351);
+    margin-left: auto;
+    margin-right: auto;
 }
 
-header .logo {
-    height: 100%;
+.bulb .handle{
+    width: 7em;
+    height: 5em;
+    background: rgba(255, 255, 255, 0.102);
+    border-radius: 1em 1em 0 0;
+    -webkit-border-radius: 1em 1em 0 0;
+    -moz-border-radius: 1em 1em 0 0;
+    -ms-border-radius: 1em 1em 0 0;
+    -o-border-radius: 1em 1em 0 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bulb .rectangle{
+    width: 7em;
+    height: 5em;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    transition: .5s ease-in;
+    -webkit-transition: .5s ease-in;
+    -moz-transition: .5s ease-in;
+    -ms-transition: .5s ease-in;
+    -o-transition: .5s ease-in;
+   
 }
 
-main {
-    padding: 20px;
+.bulb .circle{
+    width: 15em;
+    height: 15em;
+    background: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: .5s ease-in;
+    -webkit-transition: .5s ease-in;
+    -moz-transition: .5s ease-in;
+    -ms-transition: .5s ease-in;
+    -o-transition: .5s ease-in;
+    margin-top: -2em;
+}
+.controlPanel{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    padding: 15px;
+    margin: 0 0 20px 20px;
+    border: 2px solid rgba(83, 148, 235, 0.87);
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    background: transparent;
+    color:white;
+    cursor: pointer;
+}
+
+button:hover{
+    background: rgba(83, 148, 235, 0.87);
+    transition: 0.5s ease-in;
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
 }
